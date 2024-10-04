@@ -2,11 +2,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "pnpm colorthief && pnpm data && nuxt build",
+    "build": "nuxt build",
     "dev": "nuxt dev --port=5173",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
+    "postinstall": "pnpm data:fanlinks && nuxt prepare",
     "data:fanlinks": "tsx scripts/downloadData",
     "lint": "pnpm lint:eslint --fix && pnpm lint:stylelint --fix",
     "lint:eslint": "eslint --config .config/eslint.mjs",

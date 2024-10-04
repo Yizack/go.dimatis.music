@@ -18,9 +18,6 @@ jobs:
         
       - name: 📦 Install Dependencies
         run: pnpm install
-
-      - name: 🗃️ Download fanlinks data
-        run: pnpm data:fanlinks
       
       - name: 🏗️ Build
         run: pnpm generate

@@ -59,9 +59,6 @@ jobs:
       - name: 📦 Install dependencies
         run: pnpm install
 
-      - name: 🗃️ Download fanlinks data
-        run: pnpm data:fanlinks
-
       # - name: 🧪 Run test suite
       # run: pnpm test
 
