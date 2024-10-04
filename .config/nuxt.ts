@@ -1,4 +1,7 @@
 import { SITE } from "../app/utils/site";
+import fanlinksData from "../app/assets/data/all.json";
+
+const fanlkinksRoutes = fanlinksData.map(fanlink => "/" + fanlink.id);
 
 export default defineNuxtConfig({
   future: { compatibilityVersion: 4 },
@@ -71,7 +74,7 @@ export default defineNuxtConfig({
     prerender: {
       autoSubfolderIndex: false,
       crawlLinks: false,
-      routes: ["/sitemap.xml"]
+      routes: ["/", "/sitemap.xml", ...fanlkinksRoutes]
     },
     cloudflare: {
       pages: {
@@ -88,7 +91,6 @@ export default defineNuxtConfig({
 
   sitemap: {
     discoverImages: false,
-    sources: ["/api/__sitemap__/urls"],
     xslColumns: [
       { label: "URL", width: "65%" },
       { label: "Priority", select: "sitemap:priority", width: "12.5%" }
@@ -102,7 +104,8 @@ export default defineNuxtConfig({
   },
 
   features: {
-    inlineStyles: false
+    inlineStyles: false,
+    noScripts: true
   },
 
   experimental: {
