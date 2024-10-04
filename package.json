@@ -1,0 +1,35 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "pnpm colorthief && pnpm data && nuxt build",
+    "dev": "nuxt dev --port=5173",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "data:fanlinks": "tsx scripts/downloadData",
+    "lint": "pnpm lint:eslint --fix && pnpm lint:stylelint --fix",
+    "lint:eslint": "eslint --config .config/eslint.mjs",
+    "lint:stylelint": "stylelint \"**/*.{css,scss,sass}\" --config .config/stylelint.json",
+    "test:types": "vue-tsc --noEmit"
+  },
+  "devDependencies": {
+    "@nuxt/eslint": "^0.5.7",
+    "@nuxt/icon": "^1.5.3",
+    "@nuxtjs/color-mode": "^3.5.1",
+    "@nuxtjs/sitemap": "^6.1.1",
+    "@types/bootstrap": "^5.2.10",
+    "@vueuse/core": "^11.1.0",
+    "bootstrap": "^5.3.3",
+    "eslint": "^9.11.1",
+    "nuxt": "^3.13.2",
+    "sass": "^1.79.4",
+    "stylelint": "^16.9.0",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "tsx": "^4.19.1",
+    "vue-tsc": "^2.1.6",
+    "wrangler": "^3.80.0",
+    "zod": "^3.23.8"
+  },
+  "packageManager": "pnpm@9.12.0"
+}
