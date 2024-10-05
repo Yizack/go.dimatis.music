@@ -57,13 +57,13 @@ const albumsData: Partial<DimatisAlbum>[] = albums.reduce((acc = [], value) => {
 data.push(...albumsData);
 
 // Sort data by date
-const sorted: Partial<(DimatisTrack | DimatisAlbum)>[] = data.sort((a, b) => {
+const sortedData: Partial<(DimatisTrack | DimatisAlbum)>[] = data.sort((a, b) => {
   if (!a.date || !b.date) return 0;
   return new Date(b.date).getTime() - new Date(a.date).getTime();
 });
 
 // Write data to ./app/assets/data/all.json
-await writeFile(`${dataDir}/all.json`, JSON.stringify(sorted, null, 2)).catch((e) => {
+await writeFile(`${dataDir}/all.json`, JSON.stringify(sortedData)).catch((e) => {
   console.warn(e);
   process.exit(1);
 });
