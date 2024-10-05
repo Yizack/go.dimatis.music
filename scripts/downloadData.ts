@@ -5,6 +5,8 @@ import { SITE } from "../app/utils/site";
 
 const dataDir = fileURLToPath(new URL("./../app/assets/data", import.meta.url));
 
+console.info("Downloading fanlinks data...");
+
 // Download tracks and albums public data
 const [tracks, albums] = await Promise.all([
   $fetch<DimatisTrack[]>(`${SITE.website}/data/tracks.json`),
@@ -67,3 +69,5 @@ await writeFile(`${dataDir}/all.json`, JSON.stringify(sortedData)).catch((e) => 
   console.warn(e);
   process.exit(1);
 });
+
+console.info(`Downloaded a length of ${sortedData.length} fanlinks data to ./app/assets/data/all.json`);
