@@ -1,11 +1,11 @@
 const fanlinksDomain = "go.dimatis.music";
-const websiteDomain = "dimatis.yizack.com";
+const websiteDomain = "dimatis.music";
 
 export const SITE = {
   name: "Dimatis",
   domain: fanlinksDomain,
   url: `https://${fanlinksDomain}`,
-  website: "https://dimatis.yizack.com",
+  website: "https://dimatis.music",
   websiteDomain,
   twitter: "dimatismusic",
   background: "images/backgrounds/fanlinks.jpg",

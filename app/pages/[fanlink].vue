@@ -1,9 +1,4 @@
 <script setup lang="ts">
-onMounted(() => {
-  const { $colorMode } = useNuxtApp();
-  $colorMode.preference = "dark";
-});
-
 const { params } = useRoute("fanlink");
 const param = params.fanlink.toString();
 
