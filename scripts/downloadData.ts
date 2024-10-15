@@ -30,7 +30,8 @@ const data: Partial<(DimatisTrack | DimatisAlbum)>[] = tracks.map((track) => {
     title: track.title,
     description: track.description,
     date: track.date,
-    cover: track.cover,
+    art: track.art,
+    related: track.related,
     album: track.album,
     dropbox: track.dropbox,
     fanlink: track.fanlink
@@ -41,12 +42,12 @@ const data: Partial<(DimatisTrack | DimatisAlbum)>[] = tracks.map((track) => {
 const albumsData: Partial<DimatisAlbum>[] = albums.reduce((acc = [], value) => {
   if (value.type === "Album" || value.type === "EP") {
     acc.push({
-      id: value.cover,
+      id: value.id + "-" + value.type.toLowerCase(),
       artists: value.artists,
       title: `${value.title} (${value.type})`,
       description: value.description,
       date: value.date,
-      cover: value.cover,
+      art: value.art,
       type: value.type,
       dropbox: value.dropbox,
       fanlink: value.fanlink

@@ -1,13 +1,12 @@
 <script setup lang="ts">
-const { params } = useRoute("fanlink");
-const param = params.fanlink.toString();
+const params = useRoute("fanlink").params;
 
-const data = fanlinksData.find(track => track.id === param)!;
+const data = fanlinksData.find(track => track.id === params.fanlink)!;
 
 if (!data) {
   throw createError({
     statusCode: 404,
-    message: `Page not found: '${param}'`,
+    message: `Page not found: '${params.fanlink}'`,
     fatal: true
   });
 }
@@ -17,31 +16,31 @@ useHead({
   meta: [
     { name: "description", content: data.description },
     // Protocolo Open Graph
-    { property: "og:url", content: `${SITE.url}/${param}` },
+    { property: "og:url", content: `${SITE.url}/${params.fanlink}` },
     { property: "og:type", content: "website" },
     { property: "og:title", content: `${data.title} by ${data.artists} | Fanlinks` },
     { property: "og:site_name", content: SITE.name },
-    { property: "og:image", content: `${SITE.website}/images/${data.cover || param}.jpg` },
+    { property: "og:image", content: `${SITE.website}/images/${data.art || params.fanlink}.jpg` },
     { property: "og:image:width", content: "500" },
     { property: "og:image:height", content: "500" },
     { property: "og:image:alt", content: `${data.title} by ${data.artists} | Fanlinks` },
     { property: "og:description", content: data.description },
     // Twitter Card
     { name: "twitter:card", content: "summary_large_image" },
-    { name: "twitter:image", content: `${SITE.website}/images/${data.cover || param}.jpg` },
+    { name: "twitter:image", content: `${SITE.website}/images/${data.art || params.fanlink}.jpg` },
     { name: "twitter:title", content: `${data.title} by ${data.artists} | Fanlinks` },
     { name: "twitter:description", content: data.description },
     { name: "twitter:site", content: SITE.twitter }
   ],
   link: [
-    { rel: "canonical", href: `${SITE.url}/${param}` }
+    { rel: "canonical", href: `${SITE.url}/${params.fanlink}` }
   ],
   bodyAttrs: { id: "page-top" }
 });
 </script>
 
 <template>
-  <div class="bg-image" :style="`background-image: url(${SITE.website}/images/${data.cover || param}.jpg)`" />
+  <div class="bg-image" :style="`background-image: url(${SITE.website}/images/${data.art || params.fanlink}.jpg)`" />
   <div class="container text-white">
     <div class="row">
       <div class="mx-auto col-lg-4">
@@ -49,7 +48,7 @@ useHead({
           <div class="row m-auto">
             <div class="col-lg-12 p-0">
               <!-- cover -->
-              <img class="img-fluid mx-auto d-block rounded-top w-100" :src="`${SITE.website}/images/${data.cover || param}.jpg`">
+              <img class="img-fluid mx-auto d-block rounded-top w-100" :src="`${SITE.website}/images/${data.art || params.fanlink}.jpg`">
               <!-- titulo -->
               <div class="p-4">
                 <div class="text-center text-white">
@@ -58,16 +57,18 @@ useHead({
                 </div>
               </div>
             </div>
-            <!-- full album -->
-            <template v-if="data.album">
-              <a class="row m-auto links text-white" :href="`/${data.cover || param}`" target="_blank" :title="`Full ${data.type}`">
-                <div class="col-7 px-3 py-4 d-flex flex-wrap align-content-center">
-                  <img class="d-block w-100" :src="`/images/stores/${data.cover || param}.png`">
-                </div>
-                <div class="col-5 px-0 py-4 text-center my-auto">
-                  <span class="btn btn-outline-light rounded-pill px-3">View</span>
-                </div>
-              </a>
+            <!-- related -->
+            <template v-if="data.related && data.related.length">
+              <template v-for="related of data.related" :key="related">
+                <a class="row m-auto links text-white" :href="`/${related}`" target="_blank" :title="data.album || 'View'">
+                  <div class="col-7 px-3 py-4 d-flex flex-wrap align-content-center">
+                    <img class="d-block w-100" :src="`/images/related/${related}.png`">
+                  </div>
+                  <div class="col-5 px-0 py-4 text-center my-auto">
+                    <span class="btn btn-outline-light rounded-pill px-3">View</span>
+                  </div>
+                </a>
+              </template>
             </template>
             <!-- Stores -->
             <template v-for="(link, key) in data.fanlink.links" :key="key">
@@ -85,7 +86,7 @@ useHead({
             <!-- free download -->
             <div class="col-lg-12 mt-3 p-0">
               <div class="d-grid">
-                <a class="btn btn-primary btn-lg btn-block text-white rounded-0 rounded-bottom" :href="`${SITE.website}/api/download?file=${param}`" title="Free Download" data-bs-toggle="tooltip" data-bs-placement="right" role="button">Free Download</a>
+                <a class="btn btn-primary btn-lg btn-block text-white rounded-0 rounded-bottom" :href="`${SITE.website}/api/download?file=${params.fanlink}`" title="Free Download" data-bs-toggle="tooltip" data-bs-placement="right" role="button">Free Download</a>
               </div>
             </div>
           </div>
