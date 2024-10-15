@@ -126,8 +126,8 @@ useHead({
           </li>
         </ul>
       </div>
-      <div class="mx-auto col-lg-12 text-center h5 website" :class="{ 'text-dark': data.fanlink.dark }">
-        <a class="text-decoration-none" :href="SITE.website" target="_blank" title="Website">{{ SITE.websiteDomain }}</a>
+      <div class="mx-auto col-lg-12 text-center h5 website">
+        <a class="text-decoration-none" :class="{ 'text-dark': data.fanlink.dark }" :href="SITE.website" target="_blank" title="Website">{{ SITE.websiteDomain }}</a>
       </div>
     </div>
   </div>
