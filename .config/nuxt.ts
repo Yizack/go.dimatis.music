@@ -71,6 +71,7 @@ export default defineNuxtConfig({
   },
 
   nitro: {
+    preset: "cloudflare-pages",
     prerender: {
       autoSubfolderIndex: false,
       crawlLinks: false,
@@ -79,7 +80,7 @@ export default defineNuxtConfig({
     cloudflare: {
       pages: {
         routes: {
-          exclude: ["/*.html, /images/*, /fonts/*"]
+          exclude: ["/*.html", "/images/*", "/fonts/*"]
         }
       }
     }
