@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const params = useRoute("fanlink").params;
 
-const data = fanlinksData.find(track => track.id === params.fanlink)!;
+const data = fanlinksData.find(track => track.id === params.fanlink);
 
 if (!data) {
   throw createError({

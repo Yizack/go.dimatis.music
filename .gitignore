@@ -10,3 +10,4 @@ app/assets/data/all.json
 public/data/*
 /*.sql
 .data
+.wrangler

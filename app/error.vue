@@ -4,12 +4,6 @@ import type { NuxtError } from "#app";
 defineProps({
   error: { type: Object as () => NuxtError, required: true }
 });
-
-useHead({
-  bodyAttrs: {
-    class: "bg-dark"
-  }
-});
 </script>
 
 <template>
