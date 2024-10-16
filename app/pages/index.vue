@@ -13,6 +13,7 @@
                 <div class="text-center text-white">
                   <h5><b>{{ fanlink.title }}</b></h5>
                   <h6 class="mb-0">{{ fanlink.artists }}</h6>
+                  <p class="text-secondary mb-0" title="Release date">{{ formatDate(fanlink.date) }}</p>
                 </div>
               </div>
             </div>

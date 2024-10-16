@@ -53,7 +53,8 @@ useHead({
               <div class="p-4">
                 <div class="text-center text-white">
                   <h5><b>{{ data.title }}</b></h5>
-                  <h6 class="mb-0">{{ data.artists }}</h6>
+                  <h6>{{ data.artists }}</h6>
+                  <p class="text-secondary mb-0" title="Release date">{{ formatDate(data.date) }}</p>
                 </div>
               </div>
             </div>
