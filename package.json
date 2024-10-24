@@ -23,12 +23,12 @@
     "bootstrap": "^5.3.3",
     "eslint": "^9.13.0",
     "nuxt": "^3.13.2",
-    "sass": "^1.80.3",
+    "sass": "^1.80.4",
     "stylelint": "^16.10.0",
     "stylelint-config-standard-scss": "^13.1.0",
     "tsx": "^4.19.1",
     "vue-tsc": "^2.1.6",
-    "wrangler": "^3.81.0",
+    "wrangler": "^3.82.0",
     "zod": "^3.23.8"
   },
   "packageManager": "pnpm@9.12.2"

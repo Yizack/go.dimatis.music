@@ -8,7 +8,7 @@ export const SITE = {
   website: "https://dimatis.music",
   websiteDomain,
   twitter: "dimatismusic",
-  background: "images/backgrounds/fanlinks.jpg",
+  background: "images/backgrounds/fanlinks.webp",
   socials: {
     spotify: "https://open.spotify.com/artist/0RAT9Q5WZwzJRJgTI38zJR",
     soundcloud: "https://soundcloud.com/dimatis",
