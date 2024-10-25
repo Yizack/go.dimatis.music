@@ -24,7 +24,7 @@ export default defineNuxtConfig({
         { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" },
         { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" },
         { rel: "icon", type: "image/png", sizes: "192x192", href: "/android-chrome-192x192.png" },
-        { rel: "shortcut icon", href: "/images/dimatis-logo.png" },
+        { rel: "shortcut icon", href: `${SITE.website}/images/dimatis-logo.png` },
         { rel: "apple-touch-icon", sizes: "57x57", href: "/apple-touch-icon.png" },
         { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#5bbad5" },
         { rel: "manifest", href: "/site.webmanifest" }
@@ -47,10 +47,7 @@ export default defineNuxtConfig({
 
   icon: {
     mode: "svg",
-    clientBundle: {
-      scan: true,
-      sizeLimitKb: 2048
-    }
+    serverBundle: "remote"
   },
 
   colorMode: {
