@@ -48,7 +48,7 @@ useHead({
           <div class="row m-auto">
             <div class="col-lg-12 p-0">
               <!-- cover -->
-              <img class="img-fluid mx-auto d-block rounded-top w-100" :src="`${SITE.website}/images/${data.art || params.fanlink}.jpg`">
+              <img class="img-fluid mx-auto d-block rounded-top w-100" :src="`${SITE.website}/images/${data.art || params.fanlink}.jpg`" :alt="`${data.title} by ${data.artists} | Cover Art`" width="500" height="500">
               <!-- titulo -->
               <div class="p-4">
                 <div class="text-center text-white">
@@ -63,7 +63,7 @@ useHead({
               <template v-for="related of data.related" :key="related">
                 <a class="row m-auto links text-white" :href="`/${related}`" target="_blank" :title="data.album || 'View'">
                   <div class="col-7 px-3 py-4 d-flex flex-wrap align-content-center">
-                    <img class="d-block w-100" :src="`/images/related/${related}.png`">
+                    <img class="d-block w-100" :src="`/images/related/${related}.png`" :alt="related" width="500" height="150">
                   </div>
                   <div class="col-5 px-0 py-4 text-center my-auto">
                     <span class="btn btn-outline-light rounded-pill px-3">View</span>
@@ -76,7 +76,7 @@ useHead({
               <template v-if="link">
                 <a class="row m-auto links text-white" :href="key === 'spotify' ? link + '?si' : link" target="_blank" :title="SITE.stores[key].name">
                   <div class="col-7 px-3 py-4 d-flex flex-wrap align-content-center">
-                    <img class="d-block w-100" :src="SITE.stores[key].image">
+                    <img class="d-block w-100" :src="SITE.stores[key].image" :alt="`${SITE.stores[key].name} on ${SITE.stores[key].text}`" width="500" height="150">
                   </div>
                   <div class="col-5 px-0 py-4 text-center my-auto">
                     <span class="btn btn-outline-light rounded-pill px-3">{{ SITE.stores[key].text }}</span>
@@ -96,32 +96,32 @@ useHead({
       <div class="mx-auto col-lg-12 socials text-center h4">
         <ul class="icons my-2 p-0">
           <li>
-            <a href="https://open.spotify.com/artist/0RAT9Q5WZwzJRJgTI38zJR" target="_blank">
+            <a href="https://open.spotify.com/artist/0RAT9Q5WZwzJRJgTI38zJR" target="_blank" aria-label="Spotify">
               <Icon name="bi:spotify" :class="{ 'text-dark': data.fanlink.dark }" size="1.5rem" />
             </a>
           </li>
           <li>
-            <a href="https://soundcloud.com/dimatis" target="_blank">
+            <a href="https://soundcloud.com/dimatis" target="_blank" aria-label="Soundcloud">
               <Icon name="fa6-brands:soundcloud" :class="{ 'text-dark': data.fanlink.dark }" height="2rem" width="2rem" />
             </a>
           </li>
           <li>
-            <a href="https://youtube.com/dimatis" target="_blank">
+            <a href="https://youtube.com/dimatis" target="_blank" aria-label="YouTube">
               <Icon name="bi:youtube" :class="{ 'text-dark': data.fanlink.dark }" size="1.5rem" />
             </a>
           </li>
           <li>
-            <a href="https://twitter.com/dimatismusic" target="_blank">
+            <a href="https://x.com/dimatismusic" target="_blank" aria-label="X (Twitter)">
               <Icon name="bi:twitter-x" :class="{ 'text-dark': data.fanlink.dark }" size="1.5rem" />
             </a>
           </li>
           <li>
-            <a href="https://facebook.com/dimatismusic" target="_blank">
+            <a href="https://facebook.com/dimatismusic" target="_blank" aria-label="Facebook">
               <Icon name="bi:facebook" :class="{ 'text-dark': data.fanlink.dark }" size="1.5rem" />
             </a>
           </li>
           <li class="p-0">
-            <a href="https://instagram.com/dimatismusic" target="_blank">
+            <a href="https://instagram.com/dimatismusic" target="_blank" aria-label="Instagram">
               <Icon name="bi:instagram" :class="{ 'text-dark': data.fanlink.dark }" size="1.5rem" />
             </a>
           </li>
