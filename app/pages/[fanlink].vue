@@ -63,7 +63,7 @@ useHead({
               <template v-for="related of data.related" :key="related">
                 <a class="row m-auto links text-white" :href="`/${related}`" target="_blank" :title="data.album || 'View'">
                   <div class="col-7 px-3 py-4 d-flex flex-wrap align-content-center">
-                    <img class="d-block w-100" :src="`/images/related/${related}.png`" :alt="related" width="500" height="150">
+                    <img class="d-block w-100" :src="`/images/related/${related}.png`" :alt="related">
                   </div>
                   <div class="col-5 px-0 py-4 text-center my-auto">
                     <span class="btn btn-outline-light rounded-pill px-3">View</span>
@@ -76,7 +76,7 @@ useHead({
               <template v-if="link">
                 <a class="row m-auto links text-white" :href="key === 'spotify' ? link + '?si' : link" target="_blank" :title="SITE.stores[key].name">
                   <div class="col-7 px-3 py-4 d-flex flex-wrap align-content-center">
-                    <img class="d-block w-100" :src="SITE.stores[key].image" :alt="`${SITE.stores[key].name} on ${SITE.stores[key].text}`" width="500" height="150">
+                    <img class="d-block w-100" :src="SITE.stores[key].image" :alt="`${SITE.stores[key].name} on ${SITE.stores[key].text}`">
                   </div>
                   <div class="col-5 px-0 py-4 text-center my-auto">
                     <span class="btn btn-outline-light rounded-pill px-3">{{ SITE.stores[key].text }}</span>
