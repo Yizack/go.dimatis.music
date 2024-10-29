@@ -18,7 +18,7 @@ export default defineNuxtConfig({
         { name: "theme-color", content: "#151515" },
         { name: "msapplication-TileColor", content: "#da532c" },
         { name: "msapplication-TileImage", content: "/icons/mstile-144x144.png" },
-        { name: "description", content: `All ${SITE.name} fanlinks in one place.` },
+        { name: "description", content: `All ${SITE.name} fanlinks in one place.` }
       ],
       link: [
         { rel: "preload", href: "/fonts/Ebrima.woff2", as: "font", type: "font/woff2", crossorigin: "anonymous" },
