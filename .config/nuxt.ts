@@ -7,16 +7,18 @@ export default defineNuxtConfig({
   future: { compatibilityVersion: 4 },
   app: {
     head: {
+      charset: "utf-8",
+      title: `${SITE.name} Fanlinks`,
+      viewport: "width=device-width, initial-scale=1",
       htmlAttrs: {
         lang: "en"
       },
       meta: [
-        { charset: "utf-8" },
-        { name: "viewport", content: "width=device-width, initial-scale=1" },
         { name: "robots", content: "index, follow" },
         { name: "theme-color", content: "#151515" },
         { name: "msapplication-TileColor", content: "#da532c" },
-        { name: "msapplication-TileImage", content: "/icons/mstile-144x144.png" }
+        { name: "msapplication-TileImage", content: "/icons/mstile-144x144.png" },
+        { name: "description", content: `All ${SITE.name} fanlinks in one place.` },
       ],
       link: [
         { rel: "preload", href: "/fonts/Ebrima.woff2", as: "font", type: "font/woff2", crossorigin: "anonymous" },
