@@ -44,7 +44,7 @@ useHead({
   <div class="container text-white">
     <div class="row">
       <div class="mx-auto col-lg-4">
-        <div class="card o-hidden my-3 p-0 border-dark bg-dark">
+        <div class="card overflow-hidden my-3 p-0 border-dark bg-dark shadow">
           <div class="row m-auto">
             <div class="col-lg-12 p-0">
               <!-- cover -->
@@ -87,7 +87,7 @@ useHead({
             <!-- free download -->
             <div class="col-lg-12 mt-3 p-0">
               <div class="d-grid">
-                <a class="btn btn-primary btn-lg btn-block text-white rounded-0 rounded-bottom" :href="`${SITE.website}/api/download?file=${params.fanlink}`" title="Free Download" data-bs-toggle="tooltip" data-bs-placement="right" role="button">Free Download</a>
+                <a class="btn btn-light btn-lg btn-block rounded-0 fw-bold" :href="`${SITE.website}/api/download?file=${params.fanlink}`" title="Free Download" data-bs-toggle="tooltip" data-bs-placement="right" role="button">Free Download</a>
               </div>
             </div>
           </div>
@@ -96,32 +96,32 @@ useHead({
       <div class="mx-auto col-lg-12 socials text-center h4">
         <ul class="icons my-2 p-0">
           <li>
-            <a href="https://open.spotify.com/artist/0RAT9Q5WZwzJRJgTI38zJR" target="_blank" aria-label="Spotify">
+            <a href="https://open.spotify.com/artist/0RAT9Q5WZwzJRJgTI38zJR" target="_blank" title="Spotify">
               <Icon name="bi:spotify" :class="{ 'text-dark': data.fanlink.dark }" size="1.5rem" />
             </a>
           </li>
           <li>
-            <a href="https://soundcloud.com/dimatis" target="_blank" aria-label="Soundcloud">
+            <a href="https://soundcloud.com/dimatis" target="_blank" title="Soundcloud">
               <Icon name="fa6-brands:soundcloud" :class="{ 'text-dark': data.fanlink.dark }" height="2rem" width="2rem" />
             </a>
           </li>
           <li>
-            <a href="https://youtube.com/dimatis" target="_blank" aria-label="YouTube">
+            <a href="https://youtube.com/dimatis" target="_blank" title="YouTube">
               <Icon name="bi:youtube" :class="{ 'text-dark': data.fanlink.dark }" size="1.5rem" />
             </a>
           </li>
           <li>
-            <a href="https://x.com/dimatismusic" target="_blank" aria-label="X (Twitter)">
+            <a href="https://x.com/dimatismusic" target="_blank" title="X (Twitter)">
               <Icon name="bi:twitter-x" :class="{ 'text-dark': data.fanlink.dark }" size="1.5rem" />
             </a>
           </li>
           <li>
-            <a href="https://facebook.com/dimatismusic" target="_blank" aria-label="Facebook">
+            <a href="https://facebook.com/dimatismusic" target="_blank" title="Facebook">
               <Icon name="bi:facebook" :class="{ 'text-dark': data.fanlink.dark }" size="1.5rem" />
             </a>
           </li>
           <li class="p-0">
-            <a href="https://instagram.com/dimatismusic" target="_blank" aria-label="Instagram">
+            <a href="https://instagram.com/dimatismusic" target="_blank" title="Instagram">
               <Icon name="bi:instagram" :class="{ 'text-dark': data.fanlink.dark }" size="1.5rem" />
             </a>
           </li>
