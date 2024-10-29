@@ -1,12 +1,14 @@
 @font-face {
   font-family: ebrima;
   src: url("/fonts/Ebrima.woff2") format("woff2");
+  font-display: swap;
 }
 
 @font-face {
   font-family: ebrima;
   font-weight: 500;
   src: url("/fonts/EbrimaBd.woff2") format("woff2");
+  font-display: swap;
 }
 
 $white: #f7f7f7;
