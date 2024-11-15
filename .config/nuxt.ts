@@ -39,7 +39,6 @@ export default defineNuxtConfig({
   ],
 
   modules: [
-    "@nuxtjs/color-mode",
     "@nuxt/eslint",
     "@nuxtjs/sitemap",
     "@nuxt/icon"
@@ -50,13 +49,6 @@ export default defineNuxtConfig({
   icon: {
     mode: "svg",
     serverBundle: "remote"
-  },
-
-  colorMode: {
-    preference: "dark",
-    fallback: "dark",
-    dataValue: "bs-theme",
-    storageKey: "nuxt-color-mode"
   },
 
   eslint: {
