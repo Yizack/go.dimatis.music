@@ -16,9 +16,8 @@
   "devDependencies": {
     "@nuxt/eslint": "^0.7.1",
     "@nuxt/icon": "^1.8.2",
-    "@nuxtjs/sitemap": "^6.1.5",
+    "@nuxtjs/sitemap": "^7.0.0",
     "@types/bootstrap": "^5.2.10",
-    "@vueuse/core": "^11.3.0",
     "bootstrap": "^5.3.3",
     "eslint": "^9.15.0",
     "nuxt": "^3.14.1592",
@@ -28,8 +27,7 @@
     "tsx": "^4.19.2",
     "typescript": "^5.6.3",
     "vue-tsc": "^2.1.10",
-    "wrangler": "^3.90.0",
-    "zod": "^3.23.8"
+    "wrangler": "^3.90.0"
   },
   "packageManager": "pnpm@9.14.2"
 }
