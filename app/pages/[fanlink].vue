@@ -34,8 +34,7 @@ useHead({
   ],
   link: [
     { rel: "canonical", href: `${SITE.url}/${params.fanlink}` }
-  ],
-  bodyAttrs: { id: "page-top" }
+  ]
 });
 </script>
 
