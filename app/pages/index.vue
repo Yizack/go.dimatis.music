@@ -28,40 +28,40 @@
       <div class="mx-auto col-lg-12 socials text-center h4">
         <ul class="icons my-2 p-0">
           <li>
-            <a href="https://open.spotify.com/artist/0RAT9Q5WZwzJRJgTI38zJR" target="_blank" title="Spotify">
+            <NuxtLink to="https://open.spotify.com/artist/0RAT9Q5WZwzJRJgTI38zJR" target="_blank" title="Spotify">
               <Icon name="bi:spotify" size="1.5rem" />
-            </a>
+            </NuxtLink>
           </li>
           <li>
-            <a href="https://soundcloud.com/dimatis" target="_blank" title="Soundcloud">
+            <NuxtLink to="https://soundcloud.com/dimatis" target="_blank" title="Soundcloud">
               <Icon name="fa6-brands:soundcloud" height="2rem" width="2rem" />
-            </a>
+            </NuxtLink>
           </li>
           <li>
-            <a href="https://youtube.com/dimatis" target="_blank" title="YouTube">
+            <NuxtLink to="https://youtube.com/dimatis" target="_blank" title="YouTube">
               <Icon name="bi:youtube" size="1.5rem" />
-            </a>
+            </NuxtLink>
           </li>
           <li>
-            <a href="https://x.com/dimatismusic" target="_blank" title="X (Twitter)">
+            <NuxtLink to="https://x.com/dimatismusic" target="_blank" title="X (Twitter)">
               <Icon name="bi:twitter-x" size="1.5rem" />
-            </a>
+            </NuxtLink>
           </li>
           <li>
-            <a href="https://facebook.com/dimatismusic" target="_blank" title="Facebook">
+            <NuxtLink to="https://facebook.com/dimatismusic" target="_blank" title="Facebook">
               <Icon name="bi:facebook" size="1.5rem" />
-            </a>
+            </NuxtLink>
           </li>
           <li class="p-0">
-            <a href="https://instagram.com/dimatismusic" target="_blank" title="Instagram">
+            <NuxtLink to="https://instagram.com/dimatismusic" target="_blank" title="Instagram">
               <Icon name="bi:instagram" size="1.5rem" />
-            </a>
+            </NuxtLink>
           </li>
         </ul>
       </div>
     </div>
     <div class="mx-auto col-lg-12 text-center h5 website">
-      <a class="text-decoration-none" :href="SITE.domain" target="_blank" title="Website">{{ SITE.websiteDomain }}</a>
+      <NuxtLink class="text-decoration-none" :href="SITE.domain" target="_blank" title="Website">{{ SITE.websiteDomain }}</NuxtLink>
     </div>
   </div>
 </template>

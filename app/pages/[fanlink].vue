@@ -60,33 +60,33 @@ useHead({
             <!-- related -->
             <template v-if="data.related && data.related.length">
               <template v-for="related of data.related" :key="related">
-                <a class="row m-auto links text-white" :href="`/${related}`" target="_blank" :title="data.album || 'View'">
+                <NuxtLink class="row m-auto links text-white" :to="`/${related}`" :title="data.album || 'View'">
                   <div class="col-7 px-3 py-4 d-flex flex-wrap align-content-center">
                     <img class="d-block w-100" :src="`/images/related/${related}.png`" :alt="related">
                   </div>
                   <div class="col-5 px-0 py-4 text-center my-auto">
                     <span class="btn btn-outline-light rounded-pill px-3">View</span>
                   </div>
-                </a>
+                </NuxtLink>
               </template>
             </template>
             <!-- Stores -->
             <template v-for="(link, key) in data.fanlink.links" :key="key">
               <template v-if="link">
-                <a class="row m-auto links text-white" :href="key === 'spotify' ? link + '?si' : link" target="_blank" :title="SITE.stores[key].name">
+                <NuxtLink class="row m-auto links text-white" :to="key === 'spotify' ? link + '?si' : link" target="_blank" :title="SITE.stores[key].name">
                   <div class="col-7 px-3 py-4 d-flex flex-wrap align-content-center">
                     <img class="d-block w-100" :src="SITE.stores[key].image" :alt="`${SITE.stores[key].name} on ${SITE.stores[key].text}`">
                   </div>
                   <div class="col-5 px-0 py-4 text-center my-auto">
                     <span class="btn btn-outline-light rounded-pill px-3">{{ SITE.stores[key].text }}</span>
                   </div>
-                </a>
+                </NuxtLink>
               </template>
             </template>
             <!-- free download -->
             <div class="col-lg-12 mt-3 p-0">
               <div class="d-grid">
-                <a class="btn btn-light btn-lg btn-block rounded-0 fw-bold" :href="`${SITE.website}/api/download?file=${params.fanlink}`" title="Free Download" data-bs-toggle="tooltip" data-bs-placement="right" role="button">Free Download</a>
+                <NuxtLink class="btn btn-light btn-lg btn-block rounded-0 fw-bold" :to="`${SITE.website}/api/download?file=${params.fanlink}`" title="Free Download" data-bs-toggle="tooltip" data-bs-placement="right" role="button">Free Download</NuxtLink>
               </div>
             </div>
           </div>
@@ -95,39 +95,39 @@ useHead({
       <div class="mx-auto col-lg-12 socials text-center h4">
         <ul class="icons my-2 p-0">
           <li>
-            <a href="https://open.spotify.com/artist/0RAT9Q5WZwzJRJgTI38zJR" target="_blank" title="Spotify">
+            <NuxtLink to="https://open.spotify.com/artist/0RAT9Q5WZwzJRJgTI38zJR" target="_blank" title="Spotify">
               <Icon name="bi:spotify" :class="{ 'text-dark': data.fanlink.dark }" size="1.5rem" />
-            </a>
+            </NuxtLink>
           </li>
           <li>
-            <a href="https://soundcloud.com/dimatis" target="_blank" title="Soundcloud">
+            <NuxtLink to="https://soundcloud.com/dimatis" target="_blank" title="Soundcloud">
               <Icon name="fa6-brands:soundcloud" :class="{ 'text-dark': data.fanlink.dark }" height="2rem" width="2rem" />
-            </a>
+            </NuxtLink>
           </li>
           <li>
-            <a href="https://youtube.com/dimatis" target="_blank" title="YouTube">
+            <NuxtLink to="https://youtube.com/dimatis" target="_blank" title="YouTube">
               <Icon name="bi:youtube" :class="{ 'text-dark': data.fanlink.dark }" size="1.5rem" />
-            </a>
+            </NuxtLink>
           </li>
           <li>
-            <a href="https://x.com/dimatismusic" target="_blank" title="X (Twitter)">
+            <NuxtLink to="https://x.com/dimatismusic" target="_blank" title="X (Twitter)">
               <Icon name="bi:twitter-x" :class="{ 'text-dark': data.fanlink.dark }" size="1.5rem" />
-            </a>
+            </NuxtLink>
           </li>
           <li>
-            <a href="https://facebook.com/dimatismusic" target="_blank" title="Facebook">
+            <NuxtLink to="https://facebook.com/dimatismusic" target="_blank" title="Facebook">
               <Icon name="bi:facebook" :class="{ 'text-dark': data.fanlink.dark }" size="1.5rem" />
-            </a>
+            </NuxtLink>
           </li>
           <li class="p-0">
-            <a href="https://instagram.com/dimatismusic" target="_blank" title="Instagram">
+            <NuxtLink to="https://instagram.com/dimatismusic" target="_blank" title="Instagram">
               <Icon name="bi:instagram" :class="{ 'text-dark': data.fanlink.dark }" size="1.5rem" />
-            </a>
+            </NuxtLink>
           </li>
         </ul>
       </div>
       <div class="mx-auto col-lg-12 text-center h5 website">
-        <a class="text-decoration-none" :class="{ 'text-dark': data.fanlink.dark }" :href="SITE.website" target="_blank" title="Website">{{ SITE.websiteDomain }}</a>
+        <NuxtLink class="text-decoration-none" :class="{ 'text-dark': data.fanlink.dark }" :to="SITE.website" target="_blank" title="Website">{{ SITE.websiteDomain }}</NuxtLink>
       </div>
     </div>
   </div>
