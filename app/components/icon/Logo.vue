@@ -1,6 +1,8 @@
 <script setup lang="ts">
-defineProps({
-  size: { type: String, default: "1rem" }
+withDefaults(defineProps<{
+  size?: string;
+}>(), {
+  size: "1rem"
 });
 </script>
 
