@@ -22,67 +22,67 @@ export const SITE = {
   stores: {
     spotify: {
       name: "Spotify",
-      image: "/images/stores/spotify.png",
+      sprite: 9,
       text: "Stream"
     },
     soundcloud: {
       name: "SoundCloud",
-      image: "/images/stores/soundcloud.png",
+      sprite: 8,
       text: "Stream"
     },
     youtube: {
       name: "YouTube",
-      image: "/images/stores/youtube.png",
+      sprite: 13,
       text: "Stream"
     },
     apple: {
       name: "Apple Music",
-      image: "/images/stores/apple-music.png",
+      sprite: 2,
       text: "Stream"
     },
     itunes: {
       name: "iTunes",
-      image: "/images/stores/itunes.png",
+      sprite: 6,
       text: "Buy"
     },
     bandcamp: {
       name: "Bandcamp",
-      image: "/images/stores/bandcamp.png",
+      sprite: 3,
       text: "Buy"
     },
     deezer: {
       name: "Deezer",
-      image: "/images/stores/deezer.png",
+      sprite: 5,
       text: "Stream"
     },
     tidal: {
       name: "Tidal",
-      image: "/images/stores/tidal.png",
+      sprite: 10,
       text: "Stream"
     },
     yandex: {
       name: "Yandex Music",
-      image: "/images/stores/yandex.png",
+      sprite: 12,
       text: "Stream"
     },
     amazon: {
       name: "Amazon",
-      image: "/images/stores/amazon.png",
+      sprite: 1,
       text: "Buy"
     },
     beatport: {
       name: "Beatport",
-      image: "/images/stores/beatport.png",
+      sprite: 4,
       text: "Buy"
     },
     netease: {
       name: "Netease Cloud Music",
-      image: "/images/stores/netease.png",
+      sprite: 7,
       text: "Stream"
     },
     tiktok: {
       name: "TikTok",
-      image: "/images/stores/tiktok.png",
+      sprite: 11,
       text: "Use"
     }
   }

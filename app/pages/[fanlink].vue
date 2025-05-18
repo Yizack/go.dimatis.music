@@ -36,6 +36,13 @@ useHead({
     { rel: "canonical", href: `${SITE.url}/${params.fanlink}` }
   ]
 });
+
+const getSpritePercent = (position: number) => {
+  const spriteHeight = 150;
+  const totalSprites = Object.keys(data.fanlink.links).length;
+  const positionY = (position - 1) * spriteHeight / (totalSprites * spriteHeight - spriteHeight) * 100;
+  return positionY;
+};
 </script>
 
 <template>
@@ -75,7 +82,9 @@ useHead({
               <template v-if="link">
                 <NuxtLink class="row m-auto links text-white" :to="key === 'spotify' ? link + '?si' : link" target="_blank" :title="SITE.stores[key].name">
                   <div class="col-7 px-3 py-4 d-flex flex-wrap align-content-center">
-                    <img class="d-block w-100" :src="SITE.stores[key].image" :alt="`${SITE.stores[key].name} on ${SITE.stores[key].text}`">
+                    <div class="sprite-container">
+                      <div class="store-sprite" :style="{ backgroundPositionY: getSpritePercent(SITE.stores[key].sprite) + '%' }" :alt="`${SITE.stores[key].name} on ${SITE.stores[key].text}`" />
+                    </div>
                   </div>
                   <div class="col-5 px-0 py-4 text-center my-auto">
                     <span class="btn btn-outline-light rounded-pill px-3">{{ SITE.stores[key].text }}</span>
