@@ -77,17 +77,17 @@ const getSpritePercent = (position: number) => {
                 </NuxtLink>
               </template>
             </template>
-            <!-- Stores -->
+            <!-- Platforms -->
             <template v-for="(link, key) in data.fanlink.links" :key="key">
               <template v-if="link">
-                <NuxtLink class="row m-auto links text-white" :to="key === 'spotify' ? link + '?si' : link" target="_blank" :title="SITE.stores[key].name">
+                <NuxtLink class="row m-auto links text-white" :to="key === 'spotify' ? link + '?si' : link" target="_blank" :title="SITE.platforms[key].name">
                   <div class="col-7 px-3 py-4 d-flex flex-wrap align-content-center">
                     <div class="sprite-container">
-                      <div class="store-sprite" :style="{ backgroundPositionY: getSpritePercent(SITE.stores[key].sprite) + '%' }" :alt="`${SITE.stores[key].name} on ${SITE.stores[key].text}`" />
+                      <div class="sprite-image" :style="{ backgroundPositionY: getSpritePercent(SITE.platforms[key].sprite) + '%' }" :alt="`${SITE.platforms[key].name} on ${SITE.platforms[key].text}`" />
                     </div>
                   </div>
                   <div class="col-5 px-0 py-4 text-center my-auto">
-                    <span class="btn btn-outline-light rounded-pill px-3">{{ SITE.stores[key].text }}</span>
+                    <span class="btn btn-outline-light rounded-pill px-3">{{ SITE.platforms[key].text }}</span>
                   </div>
                 </NuxtLink>
               </template>

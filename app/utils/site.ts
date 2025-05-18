@@ -19,7 +19,7 @@ export const SITE = {
     musicbrainz: "https://musicbrainz.org/artist/507c89e0-5a06-4466-bef0-0ae22dd90945",
     bandcamp: "https://dimatis.bandcamp.com"
   },
-  stores: {
+  platforms: {
     spotify: {
       name: "Spotify",
       sprite: 9,
