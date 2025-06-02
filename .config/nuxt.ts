@@ -21,8 +21,6 @@ export default defineNuxtConfig({
         { name: "description", content: `All ${SITE.name} fanlinks in one place.` }
       ],
       link: [
-        { rel: "preload", href: "/fonts/Ebrima.woff2", as: "font", type: "font/woff2", crossorigin: "anonymous" },
-        { rel: "preload", href: "/fonts/EbrimaBd.woff2", as: "font", type: "font/woff2", crossorigin: "anonymous" },
         { rel: "preload", href: "/images/platforms/sprite.webp", as: "image" },
         { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" },
         { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" },
