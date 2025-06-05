@@ -39,8 +39,8 @@ useHead({
 
 const getSpritePercent = (position: number) => {
   const spriteHeight = 150;
-  const totalSprites = Object.keys(data.fanlink.links).length;
-  const positionY = (position - 1) * spriteHeight / (totalSprites * spriteHeight - spriteHeight) * 100;
+  const totalPlatforms = Object.keys(SITE.platforms).length;
+  const positionY = (position - 1) * spriteHeight / (totalPlatforms * spriteHeight - spriteHeight) * 100;
   return positionY;
 };
 </script>
