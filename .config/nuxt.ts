@@ -23,7 +23,7 @@ export default defineNuxtConfig({
         { name: "apple-mobile-web-app-capable", content: SITE.name }
       ],
       link: [
-        { rel: "preload", href: "/images/platforms/sprite.webp", as: "image" },
+        { rel: "preload", href: "/images/platforms-sprite.webp", as: "image" },
         { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
         { rel: "shortcut icon", href: "/favicon.ico" },
         { rel: "icon", type: "image/png", sizes: "512x512", href: "/android-chrome-512x512.png" },
