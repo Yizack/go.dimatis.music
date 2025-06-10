@@ -18,16 +18,16 @@
     "@nuxt/icon": "^1.13.0",
     "@nuxtjs/sitemap": "^7.3.1",
     "@types/bootstrap": "^5.2.10",
-    "@types/node": "^22.15.29",
+    "@types/node": "^22.15.30",
     "bootstrap": "^5.3.6",
     "eslint": "^9.28.0",
     "nuxt": "^3.17.5",
-    "sass": "^1.89.1",
+    "sass": "^1.89.2",
     "stylelint": "^16.20.0",
     "stylelint-config-standard-scss": "^15.0.1",
     "typescript": "^5.8.3",
     "vue-tsc": "^2.2.10",
     "wrangler": "^4.19.1"
   },
-  "packageManager": "pnpm@10.11.1"
+  "packageManager": "pnpm@10.12.1"
 }
