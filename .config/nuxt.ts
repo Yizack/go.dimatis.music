@@ -4,7 +4,7 @@ import fanlinksData from "../app/assets/data/all.json";
 const fanlkinksRoutes = fanlinksData.map(fanlink => "/" + fanlink.id);
 
 export default defineNuxtConfig({
-  future: { compatibilityVersion: 4 },
+  // future: { compatibilityVersion: 4 },
   app: {
     head: {
       charset: "utf-8",
@@ -82,15 +82,14 @@ export default defineNuxtConfig({
 
   sitemap: {
     discoverImages: false,
+    defaults: { priority: 0.8 },
+    urls: [
+      { loc: "/", priority: 1 }
+    ],
     xslColumns: [
       { label: "URL", width: "65%" },
       { label: "Priority", select: "sitemap:priority", width: "12.5%" }
     ]
-  },
-
-  routeRules: {
-    "/": { sitemap: { priority: 1 } },
-    "/*/**": { sitemap: { priority: 0.8 } }
   },
 
   features: {
@@ -107,12 +106,11 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          api: "modern-compiler",
           silenceDeprecations: ["mixed-decls", "color-functions", "import", "global-builtin"]
         }
       }
     }
   },
 
-  compatibilityDate: "2025-06-02"
+  compatibilityDate: "2025-07-16"
 });
