@@ -112,5 +112,14 @@ export default defineNuxtConfig({
     }
   },
 
+  typescript: {
+    nodeTsConfig: {
+      include: [
+        "../scripts/**/*",
+        "../shared/**/*.d.ts"
+      ]
+    }
+  },
+
   compatibilityDate: "2025-07-16"
 });
