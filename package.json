@@ -14,20 +14,20 @@
     "test:types": "vue-tsc -b --noEmit"
   },
   "devDependencies": {
-    "@nuxt/eslint": "^1.5.2",
-    "@nuxt/icon": "^1.15.0",
+    "@nuxt/eslint": "^1.8.0",
+    "@nuxt/icon": "^2.0.0",
     "@nuxtjs/sitemap": "^7.4.3",
     "@types/bootstrap": "^5.2.10",
-    "@types/node": "^24.0.14",
+    "@types/node": "^24.2.1",
     "bootstrap": "^5.3.7",
-    "eslint": "^9.31.0",
-    "nuxt": "^4.0.0",
-    "sass": "^1.89.2",
-    "stylelint": "^16.21.1",
+    "eslint": "^9.33.0",
+    "nuxt": "^4.0.3",
+    "sass": "^1.90.0",
+    "stylelint": "^16.23.1",
     "stylelint-config-standard-scss": "^15.0.1",
-    "typescript": "^5.8.3",
-    "vue-tsc": "^3.0.1",
-    "wrangler": "^4.24.3"
+    "typescript": "^5.9.2",
+    "vue-tsc": "^3.0.5",
+    "wrangler": "^4.28.1"
   },
-  "packageManager": "pnpm@10.13.1"
+  "packageManager": "pnpm@10.14.0"
 }
