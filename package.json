@@ -5,7 +5,7 @@
     "build": "nuxt build",
     "dev": "nuxt dev --port=5173",
     "generate": "nuxt generate",
-    "preview": "nuxt preview",
+    "preview": "wrangler dev",
     "postinstall": "pnpm data:fanlinks && nuxt prepare",
     "data:fanlinks": "jiti scripts/downloadData",
     "lint": "pnpm lint:eslint --fix && pnpm lint:stylelint --fix",

@@ -1,0 +1,17 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "go-dimatis-music",
+  "compatibility_date": "2025-08-25",
+  "main": ".output/server/index.mjs",
+  "compatibility_flags": ["nodejs_compat"],
+  "routes": [
+    {
+      "pattern": "go.dimatis.music",
+      "custom_domain": true
+    }
+  ],
+  "assets": {
+    "binding": "ASSETS",
+    "directory": ".output/public"
+  }
+}
