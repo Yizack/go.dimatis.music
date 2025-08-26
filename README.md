@@ -12,4 +12,4 @@ Dimatis music fanlinks site designed to be high performant and load as fast as p
 - Imported only essential Bootstrap components
 
 ## Screenshot
-![sophira](https://github.com/user-attachments/assets/2b175d5e-79f1-4705-952c-1cd044d441d8)
+![sophira](https://github.com/user-attachments/assets/fcee0bda-c82e-4243-9adc-dfa4f0e67622)
