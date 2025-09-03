@@ -21,13 +21,13 @@
     "@types/node": "^24.3.0",
     "bootstrap": "^5.3.8",
     "eslint": "^9.34.0",
-    "nuxt": "^4.0.3",
-    "sass": "^1.91.0",
+    "nuxt": "^4.1.0",
+    "sass": "^1.92.0",
     "stylelint": "^16.23.1",
     "stylelint-config-standard-scss": "^15.0.1",
     "typescript": "^5.9.2",
     "vue-tsc": "^3.0.6",
-    "wrangler": "^4.33.1"
+    "wrangler": "^4.33.2"
   },
   "packageManager": "pnpm@10.15.1"
 }
