@@ -74,78 +74,12 @@ a:hover {
   color: var(--bs-white)!important;
 }
 
-.scale-on-hover {
-  transition: transform .2s ease-in-out;
-}
-
-.scale-on-hover:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 10px rgb(0 0 0 / 15%)!important;
-}
-
-.bg-spotify {
-  background: #2cbe58;
-}
-
-.bg-spotify:hover #spotify-button {
-  background: #1fad49;
-}
-
-.loading-page {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.credits p {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.bg-light a, .bg-white a {
+.bg-light a {
   color: var(--dark-color)!important;
-}
-
-.tag a, .tag {
-  color: var(--bs-secondary)!important;
-}
-
-.nav li a {
-  color: var(--dark-color)!important;;
-}
-
-.tag a:hover, .tag:hover {
-  color: var(--bs-white)!important;
-}
-
-.album-image {
-  position: relative;
-  z-index: 1;
-}
-
-.album-image-blurry {
-  filter: blur(20px);
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0);
-  z-index: 0;
-  width: 300px;
-  height: 300px;
-  background-size: contain!important;
-}
-
-.pre-line {
-  white-space: pre-line;
 }
 
 .bg-dark {
   background-color: var(--dark-color)!important;
-}
-
-.bg-white {
-  background-color: var(--bs-white)!important;
 }
 
 .text-dark {
@@ -154,34 +88,4 @@ a:hover {
 
 .text-secondary {
   color: var(--bs-secondary)!important;
-}
-
-.bg-secondary {
-  background-color: var(--bs-secondary-bg)!important;
-}
-
-.btn-outline-dark {
-  color: var(--dark-color);
-  border-color: var(--dark-color);
-}
-
-.btn-outline-dark:hover {
-  color: var(--bs-white)!important;
-  border-color: var(--bs-white);
-  background: var(--dark-color);
-}
-
-.btn-outline-white {
-  color: var(--bs-white);
-  border-color: var(--bs-white);
-}
-
-.btn-outline-white:hover {
-  color: var(--dark-color)!important;
-  border-color: var(--bs-white);
-  background: var(--bs-white);
-}
-
-iframe {
-  border: none;
 }
