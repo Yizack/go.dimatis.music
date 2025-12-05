@@ -5,6 +5,12 @@ const fanlkinksRoutes = fanlinksData.map(fanlink => "/" + fanlink.id);
 
 export default defineNuxtConfig({
   // future: { compatibilityVersion: 4 },
+  modules: [
+    "@nuxt/eslint",
+    "@nuxtjs/sitemap",
+    "@nuxt/icon"
+  ],
+
   app: {
     head: {
       charset: "utf-8",
@@ -40,25 +46,23 @@ export default defineNuxtConfig({
     "~/assets/scss/app.scss"
   ],
 
-  modules: [
-    "@nuxt/eslint",
-    "@nuxtjs/sitemap",
-    "@nuxt/icon"
-  ],
+  site: {
+    url: SITE.url
+  },
 
   runtimeConfig: {},
 
-  icon: {
-    mode: "svg",
-    serverBundle: "remote"
+  features: {
+    inlineStyles: false,
+    noScripts: true
   },
 
-  eslint: {
-    config: {
-      autoInit: false,
-      stylistic: true
-    }
+  experimental: {
+    payloadExtraction: false,
+    typedPages: true
   },
+
+  compatibilityDate: "2025-07-16",
 
   nitro: {
     preset: "cloudflare-module",
@@ -74,32 +78,6 @@ export default defineNuxtConfig({
         }
       }
     }
-  },
-
-  site: {
-    url: SITE.url
-  },
-
-  sitemap: {
-    discoverImages: false,
-    defaults: { priority: 0.8 },
-    urls: [
-      { loc: "/", priority: 1 }
-    ],
-    xslColumns: [
-      { label: "URL", width: "65%" },
-      { label: "Priority", select: "sitemap:priority", width: "12.5%" }
-    ]
-  },
-
-  features: {
-    inlineStyles: false,
-    noScripts: true
-  },
-
-  experimental: {
-    payloadExtraction: false,
-    typedPages: true
   },
 
   vite: {
@@ -121,5 +99,27 @@ export default defineNuxtConfig({
     }
   },
 
-  compatibilityDate: "2025-07-16"
+  eslint: {
+    config: {
+      autoInit: false,
+      stylistic: true
+    }
+  },
+
+  icon: {
+    mode: "svg",
+    serverBundle: "remote"
+  },
+
+  sitemap: {
+    discoverImages: false,
+    defaults: { priority: 0.8 },
+    urls: [
+      { loc: "/", priority: 1 }
+    ],
+    xslColumns: [
+      { label: "URL", width: "65%" },
+      { label: "Priority", select: "sitemap:priority", width: "12.5%" }
+    ]
+  }
 });
