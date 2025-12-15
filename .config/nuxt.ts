@@ -84,7 +84,7 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          silenceDeprecations: ["color-functions", "import", "global-builtin"]
+          silenceDeprecations: ["color-functions", "import", "global-builtin", "if-function"]
         }
       }
     }
