@@ -5,7 +5,7 @@ const data = fanlinksData.find(track => track.id === params.fanlink);
 
 if (!data) {
   throw createError({
-    statusCode: 404,
+    status: 404,
     message: `Page not found: '${params.fanlink}'`
   });
 }
