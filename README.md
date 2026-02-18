@@ -13,5 +13,3 @@ Dimatis music fanlinks site designed to be high performant and load as fast as p
 
 ## Screenshot
 ![sophira](https://github.com/user-attachments/assets/fcee0bda-c82e-4243-9adc-dfa4f0e67622)
-
-PRUEBA
