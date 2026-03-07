@@ -1,4 +1,4 @@
-import { writeFile, mkdir } from "node:fs/promises";
+import { mkdir, writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { $fetch } from "ofetch";
 import { SITE } from "../app/utils/site";

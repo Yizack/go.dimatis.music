@@ -6,7 +6,6 @@ const fanlkinksRoutes = fanlinksData.map(fanlink => "/" + fanlink.id);
 export default defineNuxtConfig({
   // future: { compatibilityVersion: 4 },
   modules: [
-    "@nuxt/eslint",
     "@nuxtjs/sitemap",
     "@nuxt/icon"
   ],
@@ -96,13 +95,6 @@ export default defineNuxtConfig({
         "../scripts/**/*",
         "../shared/**/*.d.ts"
       ]
-    }
-  },
-
-  eslint: {
-    config: {
-      autoInit: false,
-      stylistic: true
     }
   },
 
